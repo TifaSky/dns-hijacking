@@ -22,7 +22,7 @@ class DNSHijacking {
         return req.callback(null, _hosts[hostname], net.isIPv6(_hosts[
           hostname]) ? 6 : 4);
       }
-      return _getaddrinfo(req, hostname, family, hints);
+      return _getaddrinfo(req, hostname, family, hints, false);
     };
   }
 
